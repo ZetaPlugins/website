@@ -1,0 +1,32 @@
+@use "../assets/variables" as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    --checker-size: 50px;
+    --checker-color: rgba(255, 255, 255, .05);
+    background-color: $bg-color;
+    background: linear-gradient(90deg, var(--checker-color) 1px, transparent 1px), linear-gradient(0deg, var(--checker-color) 1px, transparent 1px);
+    background-size: var(--checker-size) var(--checker-size);
+    position: relative;
+}
+
+.content {
+    --padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: calc(100% - var(--padding) * 2);
+    max-width: 1400px;
+    height: 100%;
+    padding: 0 var(--padding);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+}

@@ -1,0 +1,21 @@
+---
+import './Header.scss';
+import GitHub from '../../assets/icons/github.svg';
+import Discord from '../../assets/icons/discord.svg';
+import Modrinth from '../../assets/icons/modrinth.svg';
+---
+
+<header>
+    <img id="logo" src="/img/logo_long.svg" alt="ZetaPlugins Logo" />
+    <div class="links">
+        <a href="https://strassburger.org/discord">
+            <img src={Discord.src} alt="Discord logo" />
+        </a>
+        <a href="https://modrinth.com/organization/zetaplugins">
+            <img src={Modrinth.src} alt="Modrinth logo" />
+        </a>
+        <a href="https://github.com/ZeatPlugins">
+            <img src={GitHub.src} alt="GitHub logo" />
+        </a>
+    </div>
+</header>

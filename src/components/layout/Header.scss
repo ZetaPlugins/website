@@ -1,0 +1,35 @@
+@use "../../assets/variables" as *;
+
+header {
+    --padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1400px;
+    padding: var(--padding);
+    border-radius: 25px;
+
+    img {
+        height: 35px;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: $text-color;
+            text-decoration: none;
+
+            img {
+                height: 25px;
+            }
+        }
+    }
+}

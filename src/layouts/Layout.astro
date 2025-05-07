@@ -1,0 +1,43 @@
+---
+import './Layout.scss';
+const { title = 'ZetaPlugins', description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <meta http-equiv="content-Type" content="text/html; utf-8" />
+        <meta name="robots" content="INDEX,FOLLOW" />
+        <meta http-equiv="content-Language" content="en" />
+        <meta name="author" content="ZetaPlugins" />
+        <meta name="publisher" content="ZetaPlugins" />
+        <meta name="copyright" content="ZetaPlugins" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+
+        <!-- TODO: Add Open Graph and Twitter Card meta tags -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicons/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicons/apple-touch-icon.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="ZetaPlugins" />
+        <link rel="manifest" href="/favicons/site.webmanifest" />
+    </head>
+    <body class="">
+        <slot />
+    </body>
+</html>

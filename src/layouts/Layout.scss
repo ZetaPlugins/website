@@ -1,0 +1,17 @@
+@use "../assets/variables" as *;
+@import url("../assets/fonts/Orbitron.scss");
+@import url("../assets/fonts/Inter.scss");
+
+html,
+body {
+    color-scheme: dark;
+
+    margin: 0;
+    width: 100%;
+
+    background-color: $bg-color;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+
+    color: $text-color;
+}

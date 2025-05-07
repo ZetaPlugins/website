@@ -1,0 +1,20 @@
+---
+import './index.scss';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/Header.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import PrinciplesSection from '../components/sections/PrinciplesSection.astro';
+---
+
+<Layout
+    title="Zeta Plugins - High-quality, open-source Minecraft plugins."
+    description="Zeta Plugins is an organization of developers who create high-quality, open-source plugins for Minecraft Paper. Our goal is to build modern and efficient plugins that enhance the gameplay experience for players and server owners alike."
+>
+    <div class="content">
+        <Header />
+        <main>
+            <HeroSection />
+            <PrinciplesSection />
+        </main>
+    </div>
+</Layout>
