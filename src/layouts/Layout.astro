@@ -19,7 +19,17 @@ const { title = 'ZetaPlugins', description } = Astro.props;
         <meta name="description" content={description} />
         <title>{title}</title>
 
-        <!-- TODO: Add Open Graph and Twitter Card meta tags -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zetaplugins.com/" />
+        <meta property="og:image" content="/img/social-banner.png" />
+        <meta property="og:site_name" content="Zeta Plugins" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/img/social-banner.png" />
 
         <link
             rel="icon"
