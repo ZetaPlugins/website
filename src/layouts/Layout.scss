@@ -4,14 +4,25 @@
 
 html,
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     color-scheme: dark;
 
     margin: 0;
     width: 100%;
+    min-height: 100vh;
 
     background-color: $bg-color;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
 
     color: $text-color;
+
+    --checker-size: 50px;
+    --checker-color: rgba(255, 255, 255, .05);
+    background-image: linear-gradient(90deg, var(--checker-color) 1px, transparent 1px), linear-gradient(0deg, var(--checker-color) 1px, transparent 1px);
+    background-size: var(--checker-size) var(--checker-size);
+    position: relative;
 }

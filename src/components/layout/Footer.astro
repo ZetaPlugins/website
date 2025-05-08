@@ -1,0 +1,71 @@
+---
+import './Footer.scss';
+import GitHub from '../../assets/icons/github.svg';
+import Discord from '../../assets/icons/discord.svg';
+import Modrinth from '../../assets/icons/modrinth.svg';
+---
+
+<footer>
+    <div class="main">
+        <a href="/">
+            <img
+                src="/img/logo_long.svg"
+                alt="Zeta Plugins Logo"
+                class="logo"
+                loading="lazy"
+            />
+        </a>
+        <span class="copyright">
+            © 2025 Zeta Plugins. All rights reserved.
+        </span>
+        <div class="links">
+            <a
+                href="https://strassburger.org/discord"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src={Discord.src} alt="Discord logo" loading="lazy" />
+            </a>
+            <a
+                href="https://modrinth.com/organization/zetaplugins"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src={Modrinth.src} alt="Modrinth logo" loading="lazy" />
+            </a>
+            <a
+                href="https://github.com/ZetaPlugins"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src={GitHub.src} alt="GitHub logo" loading="lazy" />
+            </a>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="column">
+            <h3>Help</h3>
+            <div class="border"></div>
+            <a
+                href="https://strassburger.org/discord"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Discord
+            </a>
+            <a
+                href="https://docs.zetaplugins.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Documentation
+            </a>
+        </div>
+        <div class="column">
+            <h3>Legal</h3>
+            <div class="border"></div>
+            <a href="/impressum">Impressum</a>
+        </div>
+    </div>
+</footer>

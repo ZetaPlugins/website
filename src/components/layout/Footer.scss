@@ -1,0 +1,69 @@
+@use "../../assets/variables" as *;
+
+footer {
+    --padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - var(--padding) * 2);
+    max-width: 1400px;
+    padding: var(--padding);
+    margin-top: auto;
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        img.logo {
+            height: 2rem;
+            width: auto;
+        }
+
+        .copyright {
+            color: $text-color-muted;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+
+            a img {
+                height: 25px;
+                width: auto;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3rem;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 150px;
+
+            h3 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            .border {
+                width: 100%;
+                height: 3px;
+                background-color: $text-color;
+                border-radius: 7px;
+                margin: 0.3rem 0;
+            }
+
+            a {
+                color: $text-color-muted;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+        }
+    }
+}
