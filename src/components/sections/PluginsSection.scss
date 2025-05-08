@@ -1,0 +1,85 @@
+@use "../../assets/variables" as *;
+
+section.plugins {
+    margin-bottom: 500px;
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 5rem;
+
+        .plugin {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .head {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
+                svg,
+                img {
+                    --hw: 3.5em;
+                    width: var(--hw);
+                    height: var(--hw);
+                    color: $text-color-muted;
+                    border-radius: 9px;
+                }
+
+                h3 {
+                    margin: 0;
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                font-size: 1.125rem;
+                line-height: 1.5;
+                margin: 0;
+                color: $text-color-muted;
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .modrinth {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                border-radius: 9px;
+                color: $text-color;
+                // background-color: #5e5e5e;
+                // background-color: $color-primary-dark;
+                background-color: #535353;
+                width: fit-content;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+
+                svg {
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+            }
+
+            .iconLink {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.5em;
+                height: 2.5em;
+                border-radius: 9px;
+                color: $text-color;
+                // background-color: #5e5e5e;
+
+                svg {
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+            }
+        }
+    }
+}

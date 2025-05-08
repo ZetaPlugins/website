@@ -1,0 +1,75 @@
+---
+import './PluginsSection.scss';
+import Modrinth from '../../assets/icons/modrinth.svg';
+import GitHub from '../../assets/icons/github.svg';
+
+const plugins = [
+    {
+        title: 'LifeStealZ',
+        description:
+            'A relieable and highly customizable LifeSteal plugin for Minecraft servers.',
+        iconUrl: '/img/plugins/lsz.svg',
+        modrinthUrl: 'https://modrinth.com/plugin/lifestealz',
+        githubUrl: 'https://github.com/KartoffelChipss/LifeStealZ',
+    },
+    {
+        title: 'ServerLinksZ',
+        description:
+            'A a simple Plugin that allows you to add Links to the new Server Links section of your Minecraft server.',
+        iconUrl: '/img/plugins/slz.svg',
+        modrinthUrl: 'https://modrinth.com/plugin/serverlinksz',
+        githubUrl: 'https://github.com/ZetaPlugins/ServerLinksZ',
+    },
+    {
+        title: 'CookieClickerZ',
+        description:
+            'A Minecraft Cookie Clicker plugin that allows you to play a fun and addictive game within Minecraft.',
+        iconUrl: '/img/plugins/ccz.svg',
+        modrinthUrl: 'https://modrinth.com/plugin/cookieclickerz',
+        githubUrl: 'https://github.com/ZetaPlugins/CookieClickerZ',
+    },
+];
+---
+
+<section class="plugins">
+    <h2>## Our Plugins</h2>
+
+    <div class="list">
+        {
+            plugins.map((plugin) => (
+                <div class="plugin">
+                    <div class="head">
+                        <img
+                            src={plugin.iconUrl}
+                            alt={`${plugin.title} logo`}
+                            class="icon"
+                            loading="lazy"
+                        />
+                        <h3 class="title">{plugin.title}</h3>
+                    </div>
+                    <p class="description">{plugin.description}</p>
+                    <div class="links">
+                        <a
+                            href={plugin.modrinthUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="modrinth"
+                        >
+                            <Modrinth class="modrinth-icon" />
+                            <span>View on Modrinth</span>
+                        </a>
+                        <a
+                            href={plugin.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="iconLink"
+                            aria-label="GitHub"
+                        >
+                            <GitHub />
+                        </a>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
