@@ -7,9 +7,13 @@
     align-items: center;
 
     width: calc(100% - var(--padding) * 2);
-    max-width: 1400px;
+    max-width: $max-width;
     height: 100%;
     padding: 0 var(--padding);
+}
+
+main {
+    width: 100%;
 }
 
 h1,

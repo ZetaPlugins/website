@@ -5,7 +5,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: calc(100% - var(--padding) * 2);
-    max-width: 1400px;
+    max-width: $max-width;
     padding: var(--padding);
     margin-top: auto;
 
