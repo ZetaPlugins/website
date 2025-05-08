@@ -2,10 +2,15 @@
 import './PluginsSection.scss';
 import Modrinth from '../../assets/icons/modrinth.svg';
 import GitHub from '../../assets/icons/github.svg';
+import PluginDownloads from '../PluginDownloads.tsx';
+import BStatsServers from '../BStatsServers.tsx';
+import { Download, Server } from '@lucide/astro';
 
 const plugins = [
     {
         title: 'LifeStealZ',
+        slug: 'lifestealz',
+        bStatsId: '18735',
         description:
             'A relieable and highly customizable LifeSteal plugin for Minecraft servers.',
         iconUrl: '/img/plugins/lsz.svg',
@@ -14,6 +19,8 @@ const plugins = [
     },
     {
         title: 'ServerLinksZ',
+        slug: 'serverlinksz',
+        bStatsId: '22795',
         description:
             'A a simple Plugin that allows you to add Links to the new Server Links section of your Minecraft server.',
         iconUrl: '/img/plugins/slz.svg',
@@ -22,6 +29,8 @@ const plugins = [
     },
     {
         title: 'CookieClickerZ',
+        slug: 'cookieclickerz',
+        bStatsId: '',
         description:
             'A Minecraft Cookie Clicker plugin that allows you to play a fun and addictive game within Minecraft.',
         iconUrl: '/img/plugins/ccz.svg',
@@ -46,6 +55,19 @@ const plugins = [
                             loading="lazy"
                         />
                         <h3 class="title">{plugin.title}</h3>
+                    </div>
+                    <div class="stats">
+                        <span class="stat" title="Downloads">
+                            <Download />
+                            <PluginDownloads slug={plugin.slug} client:load />
+                        </span>
+                        <span class="stat" title="Servers">
+                            <Server />
+                            <BStatsServers
+                                pluginId={plugin.bStatsId}
+                                client:load
+                            />
+                        </span>
                     </div>
                     <p class="description">{plugin.description}</p>
                     <div class="links">
