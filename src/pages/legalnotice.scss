@@ -1,0 +1,9 @@
+@use "../assets/variables" as *;
+
+.content {
+    align-items: flex-start;
+}
+
+p {
+    color: $text-color-muted;
+}

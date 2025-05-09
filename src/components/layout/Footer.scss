@@ -1,12 +1,12 @@
 @use "../../assets/variables" as *;
 
 footer {
-    --padding: 35px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: $max-width;
-    padding: var(--padding) 0;
+    padding: 35 0;
+    padding-top: 75px;
     margin-top: auto;
 
     .main {
