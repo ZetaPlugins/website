@@ -4,9 +4,9 @@ footer {
     --padding: 35px;
     display: flex;
     justify-content: space-between;
-    width: calc(100% - var(--padding) * 2);
+    width: 100%;
     max-width: $max-width;
-    padding: var(--padding);
+    padding: var(--padding) 0;
     margin-top: auto;
 
     .main {
@@ -63,6 +63,21 @@ footer {
                 color: $text-color-muted;
                 text-decoration: none;
                 font-size: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5rem;
+
+        .right {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .column {
+                width: 100%;
             }
         }
     }
