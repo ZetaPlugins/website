@@ -1,0 +1,57 @@
+---
+import DiscordInvite from '../DiscordInvite';
+import './SupportSection.scss';
+import Discord from '../../assets/icons/discord.svg';
+import { BookText, ChevronRight } from '@lucide/astro';
+---
+
+<section class="support">
+    <h2>## Support</h2>
+    <div class="options">
+        <div class="docs option">
+            <div class="title">
+                <BookText />
+                <h3>Read the Documentation</h3>
+            </div>
+            <p>
+                Before asking for help, make sure to check the Documentation to
+                see if your question can be answered there.
+            </p>
+            <a
+                href="https://docs.zetaplugins.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="docslink"
+            >
+                <div class="left">
+                    <BookText />
+                    <div class="text">
+                        <span class="title">Documentation</span>
+                        <span>
+                            Find the answer to your question in the docs.
+                        </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <ChevronRight />
+                </div>
+            </a>
+        </div>
+        <div class="discord option">
+            <div class="title">
+                <Discord />
+                <h3>Join the Discord</h3>
+            </div>
+            <p>
+                If you can't find the answer to your question in the docs, you
+                can join our Discord server and create a ticket or ask in the
+                support channel.
+            </p>
+            <DiscordInvite
+                inviteCode="Cc76tYwXvy"
+                className="invite"
+                client:load
+            />
+        </div>
+    </div>
+</section>
