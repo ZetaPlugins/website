@@ -71,7 +71,8 @@ const DiscordInvite = ({
     let banner: string | null = null;
     if (inviteData.guild.splash)
         banner = `https://cdn.discordapp.com/splashes/${inviteData.guild.id}/${inviteData.guild.splash}.jpg?size=480`;
-    if (overrides?.banner) banner = overrides.banner;
+    if (overrides?.banner || overrides?.banner === null)
+        banner = overrides.banner;
     if (overrides?.banner === null) banner = null;
 
     const icon =
