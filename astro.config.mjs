@@ -6,5 +6,8 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
     integrations: [react()],
-    site: 'https://zetaplugins.com'
+    server: {
+        allowedHosts: ['zetaplugins.com', 'www.zetaplugins.com', 'mbjan.local'],
+    },
+    site: 'https://zetaplugins.com',
 });
