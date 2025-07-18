@@ -1,0 +1,64 @@
+@use "../../assets/variables" as *;
+
+section.team {
+    margin-bottom: 300px;
+
+    .members {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        // grid-gap: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    .member {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-right: auto;
+
+        .textsec {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        img.pp {
+            width: 5000px;
+            height: auto;
+            max-width: 150px;
+            border-radius: 100%;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: $text-color;
+        }
+
+        p {
+            color: $text-color-muted;
+            font-size: 1rem;
+            margin: 0;
+            margin-bottom: .5rem;
+        }
+
+        .githublink {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            color: $text-color;
+            text-decoration: none;
+
+            img {
+                height: 1.3rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-bottom: 200px;
+    }
+}
