@@ -6,7 +6,17 @@ import PluginDownloads from '../PluginDownloads.tsx';
 import BStatsServers from '../BStatsServers.tsx';
 import { Download, Server } from '@lucide/astro';
 
-const plugins = [
+interface Plugin {
+    title: string;
+    slug: string;
+    bStatsId: string;
+    description: string;
+    iconUrl: string;
+    modrinthUrl: string;
+    githubUrl: string;
+}
+
+const plugins: Plugin[] = [
     {
         title: 'LifeStealZ',
         slug: 'lifestealz',
@@ -47,6 +57,26 @@ const plugins = [
         modrinthUrl: 'https://modrinth.com/plugin/cookieclickerz',
         githubUrl: 'https://github.com/ZetaPlugins/CookieClickerZ',
     },
+    {
+        title: 'NetwatchZ',
+        slug: 'netwatchz',
+        bStatsId: '27376',
+        description:
+            'Protect your server against bots and other malicious activity through IP blocking, geoblocking, and VPN detection.',
+        iconUrl: '/img/plugins/nwz.svg',
+        modrinthUrl: 'https://modrinth.com/plugin/netwatchz',
+        githubUrl: 'https://github.com/ZetaPlugins/NetwatchZ'
+    },
+    {
+        title: 'What\'d Ya Got',
+        slug: 'wyg',
+        bStatsId: '27519',
+        description:
+            'Show off whatever you\'re holding in your hand! It shows a little icon in chat and reveals the whole item lore on hover.',
+        iconUrl: '/img/plugins/wyg.svg',
+        modrinthUrl: 'https://modrinth.com/plugin/wyg',
+        githubUrl: 'https://github.com/ZetaPlugins/WYG'
+    }
 ];
 ---
 
